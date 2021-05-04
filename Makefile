@@ -5,7 +5,7 @@ SRCS = src/main.cxx
 OBJS = $(SRCS:.cxx=.o)
 INCDIR = -I./inc
 LIBDIR =
-LIBS = -lpthread
+LIBS = -lpthread -lssl -lcrypto
 
 $(TARGET): $(OBJS)
 	$(CC) -o $@ $^ $(LIBDIR) $(LIBS)

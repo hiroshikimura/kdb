@@ -11,21 +11,22 @@ extern "C" {
 */
 
 typedef struct _tag_INTERFACE_SERVER {
-    /* サーバー秘密鍵 */
-    /* クライアント公開鍵 */
-    /* クライアント秘密鍵 */
+    SSL_METHOD*     methods;
+    SSL_CTX*        context;
+    SSL_SESSION*    session;
+    SSL*            connection;
 
 } INTERFACE_SERVER;
 
 typedef struct _tag_INTERFACE_CLIENT {
-    /* サーバー公開鍵 */
-    /* クライアント公開鍵 */
-    /* クライアント秘密鍵 */
-
+    SSL_METHOD*     methods;
+    SSL_CTX*        context;
+    SSL_SESSION*    session;
+    SSL*            connection;
 } INTERFACE_CLIENT;
 
 
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */
-#endif /* defined(INTERFACE_H)
+#endif /* defined(INTERFACE_H) */

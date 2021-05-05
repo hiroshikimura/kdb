@@ -1,5 +1,6 @@
 
 #include "main.h"
+#include "interface.h"
 
 static void* thread_func(void* params) {
     return (void*)NULL;
